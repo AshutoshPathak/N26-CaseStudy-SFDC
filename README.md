@@ -32,6 +32,9 @@ A sample product looks like this:
 <img width="1137" alt="image" src="https://user-images.githubusercontent.com/271199/174053358-edc5935e-12a7-4a11-95cc-c9c2d43d85bb.png">
 
 
+## Object Relationships:
+<img width="996" alt="image" src="https://user-images.githubusercontent.com/271199/174068191-5f395c0d-3ee1-4879-a7fb-aa019a5b724e.png">
+
 
 ### Pre Deployment Steps:
 
