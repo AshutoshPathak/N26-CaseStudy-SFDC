@@ -56,3 +56,12 @@ DataFactory.createSampleRecords();
 1) Transaction Security Policies can be implemented to ensure which user is logging in and performing what activities for better monitoring of the bank's Salesforce ecosystem.
 2) A Dashboard on frequent updates and top Product categories can be built so that users of systems can get much benifit out of it and can see most of the information at home page.
 3) The connected app that is created to provide external users access to the ProductInformationAPI needs to be mapped with Integration User with API only and very minimal permissions. 
+
+
+## Deployment to Other Org's
+
+Before doing the deployment please complete the Pre-Deployment steps mentioned in this file before.
+
+The deployment is fairly easy and require only the git extract in local machine where the Salesforce CLI is installed. Please refer this link to push the code to other orgs via SFDX CLI commands: https://www.jitendrazaa.com/blog/salesforce/getting-started-with-salesforce-dx-salesforce-developer-experience/
+
+Once the deployment is completed, please perform the post deployment steps mentioned above.
