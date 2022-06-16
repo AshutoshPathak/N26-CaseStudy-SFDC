@@ -10,7 +10,7 @@ public class ProductInformationSelector {
     
     public static String fields = 'Country__c, Country__r.Name, Product__c, Product__r.Name, Replacement_Text__c, Amount__c, Percentage__c, CurrencyIsoCode, RecordTypeId, RecordType.Name, Id';
     public static List<Product_Information__c> getRecordsByCountryAndProduct(String country, String productName){
-        String query = generateSelectClause() + ' WHERE Country__r.Name=:country AND Product__r.Name=:productName';
+        String query = generateSelectClause() + ' WHERE Country__r.Name=:country AND Product__r.Name=:productName WITH SECURITY_ENFORCED';
         logger.log(LoggingUtils.LogType.DEBUG, query, null, false);
         List<Product_Information__c> result = (List<Product_Information__c>)Database.query(query);
         return result;

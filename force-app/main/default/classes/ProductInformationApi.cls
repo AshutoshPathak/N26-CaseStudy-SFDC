@@ -1,4 +1,4 @@
-@RestResource(urlMapping='/ProductInformationApi/')
+@RestResource(urlMapping='/ProductInformationApi')
 global with sharing class ProductInformationApi {
     /*
     Purpose			: This class serves the purpose of being a Salesforce API to enternal endpoints through which they can extract Product information
@@ -12,12 +12,13 @@ global with sharing class ProductInformationApi {
     @Httpget
     global static ProductInformationResponse getProductInfo(){
         ProductInformationResponse resp = new ProductInformationResponse();
-        String contactUIID = RestContext.request.params.get('contactid');
+        String contactId = RestContext.request.params.get('contactid');
+        system.debug('##contactId: '+contactId);
         //If there is nothing in Unique Identifiers Ids of contact, dont process anything and return nothing
-        if(String.isBlank(contactUIID))
+        if(String.isBlank(contactId))
             return resp;
         try{
-            Contact con = ContactsSelector.getRecordByUniqueIdentifier(contactUIID);
+            Contact con = ContactsSelector.getRecordByUniqueIdentifier(contactId);
             if(con == null){
                 return resp;
             }

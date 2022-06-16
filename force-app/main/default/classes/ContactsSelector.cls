@@ -10,7 +10,7 @@ public class ContactsSelector {
     
     public static String fields = 'Home_Country__c, Product__c, Name, Unique_Identifier__c, Id';
     public static Contact getRecordByUniqueIdentifier(String uniqueId){
-        String query = generateSelectClause() + ' WHERE Unique_Identifier__c =:uniqueId';
+        String query = generateSelectClause() + ' WHERE Unique_Identifier__c =:uniqueId WITH SECURITY_ENFORCED';
         logger.log(LoggingUtils.LogType.DEBUG, query, null, false);
         List<Contact> results = (List<Contact>)Database.query(query);
         Contact result = results == null || results.isEmpty() ? null : results[0];

@@ -10,7 +10,7 @@ public class CaseSelector {
     
     public static String fields = 'Contact.Name, Contact.Phone, Contact.Email, Contact.Home_Country__c, Contact.Product__c, Id';
     public static Case getRecordById(Id caseId){
-        String query = generateSelectClause() + ' WHERE Id =:caseId';
+        String query = generateSelectClause() + ' WHERE Id =:caseId WITH SECURITY_ENFORCED';
         logger.log(LoggingUtils.LogType.DEBUG, query, null, false);
         List<Case> results = (List<Case>)Database.query(query);
         Case result = results == null || results.isEmpty() ? null : results[0];
