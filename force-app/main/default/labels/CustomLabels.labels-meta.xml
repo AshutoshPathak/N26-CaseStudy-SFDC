@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Contact_Email</fullName>
+        <categories>ProductInformation LWC</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Contact Email</shortDescription>
+        <value>Contact Email</value>
+    </labels>
+    <labels>
+        <fullName>Contact_Name</fullName>
+        <categories>ProductInformation LWC</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Contact Name</shortDescription>
+        <value>Contact Name</value>
+    </labels>
+    <labels>
+        <fullName>Contact_Phone</fullName>
+        <categories>ProductInformation LWC</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Contact Phone</shortDescription>
+        <value>Contact Phone</value>
+    </labels>
+    <labels>
+        <fullName>No_Data_Text</fullName>
+        <categories>ProductInformation LWC</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No Data Text</shortDescription>
+        <value>There are no product details to display</value>
+    </labels>
+    <labels>
+        <fullName>Product_Categories_and_Informations</fullName>
+        <categories>ProductInformation LWC</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Product Categories and Informations</shortDescription>
+        <value>Product Categories and Informations</value>
+    </labels>
+</CustomLabels>

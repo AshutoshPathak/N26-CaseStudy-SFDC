@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Card_Replacement_Cost</fullName>
+    <active>true</active>
+    <description>This is to keep track of Replacement Cost of a Card</description>
+    <label>Card Replacement Cost</label>
+    <picklistValues>
+        <picklist>Replacement_Text__c</picklist>
+        <values>
+            <fullName>Free</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,95 @@
+<template>
+    <template if:true={hasRecords}>
+        <div class="slds-box">
+            <div class="slds-page-header slds-page-header_record-home">
+                <div class="slds-page-header__row">
+                    <div class="slds-page-header__col-title">
+                        <div class="slds-media">
+                            <div class="slds-media__figure">
+                                <span class="slds-icon_container slds-icon-standard-opportunity">
+                                    <lightning-icon icon-name="standard:product"></lightning-icon>
+                                </span>
+                            </div>
+                            <div class="slds-media__body">
+                                <div class="slds-page-header__name">
+                                    <div class="slds-page-header__name-title">
+                                        <h1>
+                                            <span>Product</span>
+                                            <span class="slds-page-header__title slds-truncate" title={productInfos.ProductName}>
+                                                <a href="#" onclick={handleProductClick}>{productInfos.ProductName}</a></span>
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-page-header__row slds-page-header__row_gutters">
+                    <div class="slds-page-header__col-details">
+                        <ul class="slds-page-header__detail-row">
+                            <li class="slds-page-header__detail-block">
+                                <div class="slds-text-title slds-truncate" title={label.Contact_Name}>{label.Contact_Name}</div>
+                                <div class="slds-truncate"><a href="#" onclick={handleContactClick}>{productInfos.ContactName}</a></div>
+                            </li>
+                            <li class="slds-page-header__detail-block">
+                                <div class="slds-text-title slds-truncate" title={label.Contact_Phone}>{label.Contact_Phone}</div>
+                                <div class="slds-truncate"><lightning-formatted-phone value={productInfos.ContactPhone}></lightning-formatted-phone></div>
+                            </li>
+                            <li class="slds-page-header__detail-block">
+                                <div class="slds-text-title slds-truncate" title={label.Contact_Email}>{label.Contact_Email}</div>
+                                <div class="slds-truncate"><lightning-formatted-email value={productInfos.ContactEmail}></lightning-formatted-email></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-page-header slds-page-header_record-home">
+                <div class="slds-page-header__row">
+                    <div class="slds-page-header__col-title">
+                        <div class="slds-media">
+                            <div class="slds-media__figure">
+                                <span class="slds-icon_container slds-icon-standard-opportunity">
+                                    <lightning-icon icon-name="standard:products"></lightning-icon>
+                                </span>
+                            </div>
+                            <div class="slds-media__body">
+                                <div class="slds-page-header__name">
+                                    <div class="slds-page-header__name-title">
+                                        <h1>
+                                            <span class="slds-page-header__title slds-truncate">{label.Product_Categories_and_Informations}</span>
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-page-header__row slds-page-header__row_gutters">
+                    <div class="slds-page-header__col-details">
+                        <ul class="slds-page-header__detail-row">
+                            <template for:each={productInfos.ProductInformations} for:item="prodInfos">
+                                <span key={prodInfos.productId} class="slds-text-title slds-truncate" title={prodInfos.productTypeCategory}>{prodInfos.productTypeCategory}</span>
+                                <li key={prodInfos.productId} class="slds-page-header__detail-block">
+                                    <template if:true={prodInfos.isPercentage}>
+                                        <lightning-formatted-number format-style="percent" value={prodInfos.percentage}></lightning-formatted-number>
+                                    </template>
+                                    <template if:true={prodInfos.isAmount}>
+                                        <lightning-formatted-number format-style="currency" currency-code={prodInfos.currencyISOCode} value={prodInfos.amount}></lightning-formatted-number>
+                                    </template>
+                                    <template if:true={prodInfos.productValueWhenAmountPercentageIsNull}>
+                                        <span>{prodInfos.productValueWhenAmountPercentageIsNull}</span>
+                                    </template>
+                                </li>
+                            </template>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </template>
+    <template if:false={hasRecords}>
+        {label.No_Data_Text}
+    </template>
+</template>

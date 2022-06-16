@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Case_Record_Page</members>
+        <name>FlexiPage</name>
+    </types>
+     <types>
+        <members>DMLHelper</members>
+        <members>ProductInformationController</members>
+        <members>ProductInformationApi</members>
+        <members>LoggingUtils</members>
+        <members>Constants</members>
+        <members>ProductInformationResponse</members>
+        <members>ProductInformationApiTest</members>
+        <members>CaseSelector</members>
+        <members>ProductInformation</members>
+        <members>ProductInformationSelector</members>
+        <members>ContactsSelector</members>
+        <members>DataFactory</members>
+        <name>ApexClass</name>
+    </types>
+     <types>
+        <members>Contact</members>
+        <members>Country__c</members>
+        <members>Product_Information__c</members>
+        <members>Log__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Country__c</members>
+        <members>Product_Information__c</members>
+        <members>Log__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ListView</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomLabel</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>Country__c-Country Layout</members>
+        <members>Product_Information__c-ATM Fee in Other Currencies</members>
+        <members>Product_Information__c-Card Replacement Cost</members>
+        <members>Product_Information__c-Cost Per Calendar Month</members>
+        <members>Contact-Contact %28Marketing%29 Layout</members>
+        <members>Contact-Contact %28Sales%29 Layout</members>
+        <members>Contact-Contact %28Support%29 Layout</members>
+        <members>Contact-Contact Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Admin</members>
+        <name>Profile</name>
+    </types>
+    <version>50.0</version>
+</Package>

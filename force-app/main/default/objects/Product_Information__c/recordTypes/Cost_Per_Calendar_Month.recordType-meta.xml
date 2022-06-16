@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cost_Per_Calendar_Month</fullName>
+    <active>true</active>
+    <description>This is to keep track of Cost per month</description>
+    <label>Cost Per Calendar Month</label>
+    <picklistValues>
+        <picklist>Replacement_Text__c</picklist>
+        <values>
+            <fullName>Free</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>
