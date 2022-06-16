@@ -37,3 +37,22 @@ A sample product looks like this:
 1) Please open the anonymous window and execute below command to create all the sample test records:
 
 DataFactory.createSampleRecords();
+
+## Observations
+### Enhancements: 
+
+1) Main functionalities updates viz, Country, Product Information etc are monitored via Field History Tracking. This will help keeping track of who did what in terms of modifications. For helping with any regulations/audit, this thing can be benifical to N26 bank.
+
+<img width="1180" alt="image" src="https://user-images.githubusercontent.com/271199/174054884-1f27b1fb-e591-4ebe-964e-4528e87a6cb0.png">
+
+2) Selector patterns are used in the code to keep all the DB queries at one place (per object) for better maintenance of code and Object Responsibility principle of OOPS.
+3) A custom logging framework is used with the help of Log__c object to keep track of error/info/warning/debug throughout the application.
+4) Code is written using seperation of concern and based on modularity so that its easy to manage and work
+5) DataFactory class is written that serves multiple purposes. This class can be used as a Test Data Factory from Unit Test and can be used outside tests to create sample data. But at the same side this class make sure that even by mistake it is not creating records if current org is production.
+6) Written DML Helper class to validate the Object permissions whenever a DML is happening. This safeguards the code behavior to not run the code if current user doesnt have such privileges as per their profile permissions. This also helps passing security scan reviews of Salesforce. All the Selector patterns queries are also running with "WITH SECURITY_ENFORCED" so that FLS are respected.
+
+
+### Scope of Improvement:
+1) Transaction Security Policies can be implemented to ensure which user is logging in and performing what activities for better monitoring of the bank's Salesforce ecosystem.
+2) A Dashboard on frequent updates and top Product categories can be built so that users of systems can get much benifit out of it and can see most of the information at home page.
+3) The connected app that is created to provide external users access to the ProductInformationAPI needs to be mapped with Integration User with API only and very minimal permissions. 
